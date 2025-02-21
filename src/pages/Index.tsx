@@ -1,10 +1,15 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { Brain, Coins, Users, GamepadIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import ParticleBackground from '@/components/ParticleBackground';
 import FeatureCard from '@/components/FeatureCard';
+import WaitlistForm from '@/components/WaitlistForm';
+import Footer from '@/components/Footer';
 
 const Index = () => {
+  const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+
   const features = [
     {
       icon: <Brain />,
@@ -41,8 +46,11 @@ const Index = () => {
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
             The Future of AI-Native Gaming
           </p>
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6">
-            Join Whitelist
+          <Button 
+            className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6"
+            onClick={() => setIsWaitlistOpen(true)}
+          >
+            Join Waitlist
           </Button>
         </div>
       </section>
@@ -92,11 +100,23 @@ const Index = () => {
       <section className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Ready to Join?</h2>
-          <Button className="bg-secondary text-white hover:bg-secondary/90 text-lg px-8 py-6">
+          <Button 
+            className="bg-secondary text-white hover:bg-secondary/90 text-lg px-8 py-6"
+            onClick={() => setIsWaitlistOpen(true)}
+          >
             Get Started Now
           </Button>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
+
+      {/* Waitlist Form Modal */}
+      <WaitlistForm 
+        isOpen={isWaitlistOpen}
+        onClose={() => setIsWaitlistOpen(false)}
+      />
     </div>
   );
 };
