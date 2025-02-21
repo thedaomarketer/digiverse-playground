@@ -28,7 +28,7 @@ const Index = () => {
     },
     {
       icon: <Coins />,
-      title: "DIGIMON Token",
+      title: "TAOGIMON Token",
       description: "Power the ecosystem's economy with our native cryptocurrency for seamless transactions."
     }
   ];
@@ -75,7 +75,7 @@ const Index = () => {
       {/* Token Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">DIGIMON Token</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">TAOGIMON Token</h2>
           <p className="text-xl text-gray-300 mb-8">
             The native cryptocurrency powering the next generation of AI gaming experiences
           </p>
