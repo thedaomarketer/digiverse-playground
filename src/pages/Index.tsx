@@ -104,11 +104,6 @@ const Index = () => {
             className="bg-secondary text-white hover:bg-secondary/90 text-lg px-8 py-6"
             onClick={() => setIsWaitlistOpen(true)}
           >
-            Get Started Now
-          </Button>
-        </div>
-      </section>
-
       {/* Footer */}
       <Footer />
 
